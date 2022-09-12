@@ -9,13 +9,24 @@ import { PlaceHolder_2 } from "./components/PlaceHolder_2";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import { Route, Routes } from "react-router-dom";
+
 export const App = () => {
   return (
     <div>
       <NavigationBar />
-      <Carousel_first />
-      <PlaceHolder_1 />
-      <PlaceHolder_2 />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Carousel_first />
+              <PlaceHolder_1 />
+              <PlaceHolder_2 />
+            </>
+          }
+        />
+      </Routes>
     </div>
   );
 };
