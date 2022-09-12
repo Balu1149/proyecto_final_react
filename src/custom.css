@@ -1,3 +1,7 @@
-.carousel-inner > .item {
-  height: 0px;
+.color-nav {
+  background-color: #7f0000;
+}
+
+.texto_nav_color {
+  color: white;
 }
