@@ -7,17 +7,21 @@ import { NavLink } from "react-router-dom";
 
 export const NavigationBar = () => {
   return (
-    <Navbar className="color-nav" expand="lg" variant="dark">
+    <Navbar className="color-nav" expand="lg" variant="dark" sticky="top">
       <Container>
-        <Navbar.Brand href="#home">Ryodan-Comiquería</Navbar.Brand>
+        <Navbar.Brand to="/" as={NavLink}>
+          Ryodan-Comiquería
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto" style={{ alignItems: "center" }}>
             <Nav.Link to="/" as={NavLink}>
-              Jajas ayuda
+              Inicio
             </Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <Nav.Link to="/productos" as={NavLink}>
+              Productos
+            </Nav.Link>
+            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -28,7 +32,12 @@ export const NavigationBar = () => {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#link">Otro link</Nav.Link>
+            <Nav.Link href="#link">Otro link</Nav.Link> */}
+          </Nav>
+          <Nav>
+            <Nav.Link to="/shopping_cart" as={NavLink}>
+              <span class="material-symbols-outlined">shopping_cart</span>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -22,6 +22,14 @@ export const App = () => {
             <>
               <Carousel_first />
               <PlaceHolder_1 />
+            </>
+          }
+        />
+        <Route
+          path="/Productos"
+          element={
+            <>
+              <PlaceHolder_1 />
               <PlaceHolder_2 />
             </>
           }
