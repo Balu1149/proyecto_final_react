@@ -9,16 +9,20 @@ export const OffCanvas_3 = () => {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Launch
+        Ver más
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title>Trama</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+        La historia tiene lugar en un mundo donde el 80% de la población ha desarrollado «dones», 
+          surgiendo así héroes y villanos. Entre el 20% de personas sin dones, se encuentra Izuku Midoriya,
+          cuyo mayor deseo es poder estudiar en la U.A. y convertirse en un héroe como su ídolo All Might. Un día, tras conocer personalmente a 
+          All Might, este le ofrece heredar sus poderes al ver su gran determinación a pesar de haber nacido sin don. Midoriya accede y empieza 
+          a estudiar en la U.A, donde hace nuevos amigos, conoce otros héroes profesionales, aprende a dominar sus poderes y se enfrenta a auténticos
+          villanos.
         </Offcanvas.Body>
       </Offcanvas>
     </>
