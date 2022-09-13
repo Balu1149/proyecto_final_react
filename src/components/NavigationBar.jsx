@@ -1,9 +1,10 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink } from "react-router-dom";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export const NavigationBar = () => {
   return (
@@ -35,6 +36,11 @@ export const NavigationBar = () => {
             <Nav.Link href="#link">Otro link</Nav.Link> */}
           </Nav>
           <Nav>
+            <Nav.Link href="https://www.instagram.com/ryodan.comiqueria/">
+              <span>
+                <FontAwesomeIcon icon={faInstagram} />
+              </span>
+            </Nav.Link>
             <Nav.Link to="/shopping_cart" as={NavLink}>
               <span class="material-symbols-outlined">shopping_cart</span>
             </Nav.Link>
