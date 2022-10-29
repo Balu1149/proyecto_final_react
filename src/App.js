@@ -14,7 +14,7 @@ import { Route, Routes } from "react-router-dom";
 
 export const App = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: "#212121" }}>
       <NavigationBar />
       <Routes>
         <Route
@@ -25,7 +25,6 @@ export const App = () => {
               <PlaceHolder_1 />
               <PlaceHolder_2 />
               <PlaceHolder_2 />
-              <Footer />
             </>
           }
         />
@@ -39,6 +38,7 @@ export const App = () => {
           }
         />
       </Routes>
+      <Footer />
     </div>
   );
 };
