@@ -23,7 +23,6 @@ export const App = () => {
               <Carousel_first />
               <PlaceHolder_1 />
               <PlaceHolder_2 />
-              <PlaceHolder_2 />
             </>
           }
         />
