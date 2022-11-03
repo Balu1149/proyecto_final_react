@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Book",
+    "precio": 10.99,
+    "imgURL": "/images/Kaiju8.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Computer",
+    "precio": 1199,
+    "imgURL": "/images/MHA.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Banana",
+    "precio": 1.05,
+    "imgURL": "/images/JOJO.jpeg"
+  }
+]
