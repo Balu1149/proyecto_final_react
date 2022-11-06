@@ -7,6 +7,7 @@ import { PlaceHolder_1 } from "./components/PlaceHolder_1";
 import { PlaceHolder_2 } from "./components/PlaceHolder_2";
 import { Footer } from "./components/Footer";
 import { Store } from "./components/Store";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext.tsx";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,31 +17,33 @@ import { Route, Routes } from "react-router-dom";
 export const App = () => {
   return (
     <div style={{ backgroundColor: "#212121" }}>
-      <NavigationBar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Carousel_first />
-              <PlaceHolder_1 />
-              <PlaceHolder_2 />
-              <PlaceHolder_2 />
-            </>
-          }
-        />
-        <Route
-          path="/Productos"
-          element={
-            <>
-              {/* <PlaceHolder_1 />
+      <ShoppingCartProvider>
+        <NavigationBar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Carousel_first />
+                <PlaceHolder_1 />
+                <PlaceHolder_2 />
+                <PlaceHolder_2 />
+              </>
+            }
+          />
+          <Route
+            path="/Productos"
+            element={
+              <>
+                {/* <PlaceHolder_1 />
               <PlaceHolder_2 /> */}
-              <Store />
-            </>
-          }
-        />
-      </Routes>
-      <Footer />
+                <Store />
+              </>
+            }
+          />
+        </Routes>
+        <Footer />
+      </ShoppingCartProvider>
     </div>
   );
 };

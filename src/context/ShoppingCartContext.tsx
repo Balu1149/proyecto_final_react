@@ -5,16 +5,20 @@ type ShoppingCartProviderProps = {
   children: ReactNode;
 };
 
-type CartItems = {
+type CartItem = {
   id: number;
   quantity: number;
 };
 
 type ShoppingCartContext = {
+  openCart: () => void;
+  closeCart: () => void;
   getItemQuantity: (id: number) => number;
   increaseCartQuantity: (id: number) => void;
   decreaseCartQuantity: (id: number) => void;
   removeFromCart: (id: number) => void;
+  cartQuantity: number;
+  cartItems: CartItem[];
 };
 
 const ShoppingCartContext = createContext({} as ShoppingCartContext); //
@@ -23,8 +27,8 @@ export function useShoppingCart() {
   return useContext(ShoppingCartContext);
 }
 
-export function ShppingCartProvider({ children }: ShoppingCartProviderProps) {
-  const [cartItems, setCartItems] = useState<CartItems[]>([]);
+export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
   function getItemQuantity(id: number) {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
