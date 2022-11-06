@@ -1,7 +1,7 @@
 import Articulos from "./articulos.json";
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { Articulo } from "./Articulo";
+import { Articulo } from "./Articulo.tsx";
 
 export const Store = () => {
   return (

@@ -1,8 +1,24 @@
 import { Button, Card } from "react-bootstrap";
 import React from "react";
+import { useShoppingCart } from "../context/ShoppingCartContext.tsx";
 
-export function Articulo({ id, name, precio, imgURL }) {
-  const cantidad = 1;
+type ArticuloProps = {
+  id: number;
+  name: string;
+  precio: number;
+  imgURL: string;
+};
+
+export function Articulo({ id, name, precio, imgURL }: ArticuloProps) {
+  const {
+    getItemQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFromCart,
+  } = useShoppingCart();
+
+  const quantity = getItemQuantity(id);
+
   return (
     <Card className="h-100" style={{ background: "#7F0102", color: "white" }}>
       <Card.Img
@@ -17,8 +33,12 @@ export function Articulo({ id, name, precio, imgURL }) {
           <span className="ms-2 text-muted">${precio}</span>
         </Card.Title>
         <div className="mt-auto">
-          {cantidad == 0 ? (
-            <Button className="w-100" variant="light">
+          {quantity === 0 ? (
+            <Button
+              className="w-100"
+              variant="light"
+              onClick={() => increaseCartQuantity(id)}
+            >
               Agregar al carrito
             </Button>
           ) : (
@@ -30,15 +50,27 @@ export function Articulo({ id, name, precio, imgURL }) {
                 className="d-flex align-items-center justify-content-center"
                 style={{ gap: "0.5rem" }}
               >
-                <Button className="w-100" variant="light">
+                <Button
+                  className="w-100"
+                  variant="light"
+                  onClick={() => decreaseCartQuantity(id)}
+                >
                   -
                 </Button>
-                <span className="fs-3">{cantidad}</span>
-                <Button className="w-100" variant="light">
+                <span className="fs-3">{quantity}</span>
+                <Button
+                  className="w-100"
+                  variant="light"
+                  onClick={() => increaseCartQuantity(id)}
+                >
                   +
                 </Button>
               </div>
-              <Button variant="danger" size="sm">
+              <Button
+                variant="danger"
+                size="sm"
+                onClick={() => removeFromCart(id)}
+              >
                 x
               </Button>
             </div>
