@@ -6,10 +6,10 @@ type ArticuloProps = {
   id: number;
   name: string;
   precio: number;
-  imgURL: string;
+  imgUrl: string;
 };
 
-export function Articulo({ id, name, precio, imgURL }: ArticuloProps) {
+export function Articulo({ id, name, precio, imgUrl }: ArticuloProps) {
   const {
     getItemQuantity,
     increaseCartQuantity,
@@ -23,7 +23,7 @@ export function Articulo({ id, name, precio, imgURL }: ArticuloProps) {
     <Card className="h-100" style={{ background: "#7F0102", color: "white" }}>
       <Card.Img
         variant="top"
-        src={imgURL}
+        src={imgUrl}
         height="300px"
         style={{ objectFit: "cover" }}
       />

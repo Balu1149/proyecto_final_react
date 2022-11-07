@@ -5,8 +5,11 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { useShoppingCart } from "../context/ShoppingCartContext.tsx";
 
 export const NavigationBar = () => {
+  const { openCart, cartQuantity } = useShoppingCart();
+
   return (
     <Navbar className="color-nav" expand="lg" variant="dark" sticky="top">
       <Container>
@@ -43,6 +46,17 @@ export const NavigationBar = () => {
             </Nav.Link>
             <Nav.Link to="/shopping_cart" as={NavLink}>
               <span class="material-symbols-outlined">shopping_cart</span>
+              <div
+                className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
+                style={{
+                  color: "white",
+                  width: "1.5rem",
+                  height: "1.5rem",
+                  position: "absolute",
+                }}
+              >
+                {cartQuantity}
+              </div>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

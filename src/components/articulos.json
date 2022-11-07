@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Book",
     "precio": 10.99,
-    "imgURL": "/images/Kaiju8.jpeg"
+    "imgURL": "https://ryodancomiqueria.blob.core.windows.net/imagenes/JOJO.jpeg"
   },
   {
     "id": 2,
