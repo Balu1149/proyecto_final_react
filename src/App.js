@@ -25,9 +25,8 @@ export const App = () => {
             element={
               <>
                 <Carousel_first />
+                <h3 className="d-block p-2 text-light" style={{marginTop:"100px", textAlign:"center", background: "#212121"}}> Nuevos productos</h3>
                 <PlaceHolder_1 />
-                <PlaceHolder_2 />
-                <PlaceHolder_2 />
               </>
             }
           />

@@ -8,15 +8,15 @@ export const OffCanvas_2 = () => {
     const handleShow = () => setShow(true);
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button onClick={handleShow} variant="outline-light" >
         Ver más
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
+      <Offcanvas.Header closeButton closeVariant='white' style={{color:'white', background:"#7F0102", textAlign:"justify"}}>
           <Offcanvas.Title>Trama</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body style={{color:'white', background:"#7F0102", textAlign:"justify"}}>
             <p>Saori Kido, directora de la fundación Kido, organiza un torneo entre los caballeros
             (El Torneo Galáctico) en el cual participan guerreros con poderosas armaduras y que son conocidos
             como los Caballeros de Bronce, quienes luchan no solo por motivos personales, sino también por la codiciada 
