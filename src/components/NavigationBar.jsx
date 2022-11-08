@@ -6,6 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { useShoppingCart } from "../context/ShoppingCartContext.tsx";
+import { Button } from "react-bootstrap";
 
 export const NavigationBar = () => {
   const { openCart, cartQuantity } = useShoppingCart();
@@ -44,20 +45,27 @@ export const NavigationBar = () => {
                 <FontAwesomeIcon icon={faInstagram} />
               </span>
             </Nav.Link>
-            <Nav.Link to="/shopping_cart" as={NavLink}>
-              <span class="material-symbols-outlined">shopping_cart</span>
-              <div
-                className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
-                style={{
-                  color: "white",
-                  width: "1.5rem",
-                  height: "1.5rem",
-                  position: "absolute",
-                }}
+            {cartQuantity > 0 && (
+              <Button
+                onClick={openCart}
+                style={{ width: "6rem", height: "6rem", position: "relative" }}
+                variant="outline-primary"
+                className="rounded-circle"
               >
-                {cartQuantity}
-              </div>
-            </Nav.Link>
+                <span class="material-symbols-outlined">shopping_cart</span>
+                <div
+                  className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
+                  style={{
+                    color: "white",
+                    width: "1.5rem",
+                    height: "1.5rem",
+                    position: "absolute",
+                  }}
+                >
+                  {cartQuantity}
+                </div>
+              </Button>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
