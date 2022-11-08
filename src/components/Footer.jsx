@@ -123,9 +123,9 @@ Compra seguro, recibe rápido 🚛              </p>
         </MDBContainer>
       </section>
 
-      <div className='text-center text-dark p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+      <div className='text-center text-light p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         © 2020 Copyright:
-        <a className='text-dark' href='https://www.instagram.com/ryodan.comiqueria/'>
+        <a className='text-light' href='https://www.instagram.com/ryodan.comiqueria/'>
           Ryodan-Comiquería
         </a>
       </div>

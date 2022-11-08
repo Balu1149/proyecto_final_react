@@ -25,9 +25,9 @@ export const App = () => {
             element={
               <>
                 <Carousel_first />
+                <h3 style={{marginTop:"100px", textAlign:"center", color:"White"}}> Nuevos productos</h3>
+                <hr style={{background: "#7F0102", color: "#7F0102", height: "3px", width:"20%", opacity:"1", margin:"auto"}}/>
                 <PlaceHolder_1 />
-                <PlaceHolder_2 />
-                <PlaceHolder_2 />
               </>
             }
           />

@@ -19,7 +19,7 @@ export const NavigationBar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto" style={{ alignItems: "center" }}>
+          <Nav className="me-auto" style={{ alignItems: "center" }} >
             <Nav.Link to="/" as={NavLink}>
               Inicio
             </Nav.Link>
@@ -39,8 +39,8 @@ export const NavigationBar = () => {
             </NavDropdown>
             <Nav.Link href="#link">Otro link</Nav.Link> */}
           </Nav>
-          <Nav>
-            <Nav.Link href="https://www.instagram.com/ryodan.comiqueria/">
+          <Nav style={{ alignItems: "center" }}>
+            <Nav.Link href="https://www.instagram.com/ryodan.comiqueria/" >
               <span>
                 <FontAwesomeIcon icon={faInstagram} />
               </span>

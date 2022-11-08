@@ -8,15 +8,15 @@ export const OffCanvas_1 = () => {
     const handleShow = () => setShow(true);
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button onClick={handleShow} variant="outline-light" >
         Ver más
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
+        <Offcanvas.Header closeButton closeVariant='white' style={{color:'white', background:"#7F0102", textAlign:"justify"}}>
           <Offcanvas.Title>Trama</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body style={{color:'white', background:"#7F0102", textAlign:"justify"}}>
           <p>La trama se desarrolla en torno a la historia del linaje Joestar, 
           una poderosa familia de origen británico destinada a combatir fuerzas 
           sobrenaturales malvadas usando poderes adquiridos; la obra abarca varias

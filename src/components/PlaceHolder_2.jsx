@@ -6,7 +6,7 @@ import { OffCanvas_4 } from './OffCanvas_4';
 export const PlaceHolder_2 = () => {
   return (
 <div className="d-flex justify-content-around">
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '18rem'}}>
         <Card.Img variant="top" src="/images/MHA.jpeg" />
         <Card.Body>
           <Card.Title>My Hero Academia</Card.Title>
