@@ -23,6 +23,19 @@ export const PlaceHolder_1 = () => {
           <OffCanvas_1/>
         </Card.Body>
       </Card>
+      
+      <Card style={{ width: '18rem', color:'white', background:"#7F0102", marginTop: '100px'}}>
+        <Card.Img variant="top" src="/images/JOJO.jpeg" />
+        <Card.Body>
+          <Card.Title>Jojo's Bizarre Adventure</Card.Title>
+          <Card.Text style={{color:'white', textAlign:"justify"}}>
+          La trama se desarrolla en torno a la historia del linaje Joestar, 
+          una poderosa familia de origen británico destinada a combatir fuerzas 
+          sobrenaturales malvadas usando poderes adquiridos
+          </Card.Text>
+          <OffCanvas_1/>
+        </Card.Body>
+      </Card>
 
       <Card style={{ width: '18rem', color:'white', background:"#7F0102", marginTop: '100px'}}>
         <Card.Img variant="top" src="/images/Saint_Seiya.jpeg" />

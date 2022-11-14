@@ -36,12 +36,12 @@ export function CartItem({ id, quantity }: CartItemProps) {
         <div>
           {item.data.name}{" "}
           {quantity > 1 && (
-            <span className="text-muted" style={{ fontSize: ".65rem" }}>
+            <span  style={{ fontSize: ".65rem" }}>
               x{quantity}
             </span>
           )}
         </div>
-        <div className="text-muted" style={{ fontSize: ".75rem" }}>
+        <div  style={{ fontSize: ".75rem" }}>
           {item.data.precio}
         </div>
       </div>

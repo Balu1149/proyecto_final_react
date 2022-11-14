@@ -49,7 +49,7 @@ export const NavigationBar = () => {
               <Button
                 onClick={openCart}
                 style={{ width: "6rem", height: "6rem", position: "relative" }}
-                variant="outline-primary"
+                variant="outline-white"
                 className="rounded-circle"
               >
                 <span class="material-symbols-outlined">shopping_cart</span>
