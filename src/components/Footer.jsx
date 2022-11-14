@@ -22,11 +22,11 @@ export const Footer = () => {
         </div>
 
         <div>
-          <a href="" className="me-4 text-reset">
-            <MDBIcon fab icon="facebook-f" />
-          </a>
-          <a href="" className="me-4 text-reset">
-            <MDBIcon fab icon="twitter" />
+          <a
+            href="https://www.twitch.tv/ryodancomiqueria"
+            className="me-4 text-reset"
+          >
+            <MDBIcon fab icon="twitch" />
           </a>
           <a
             href="https://www.instagram.com/ryodan.comiqueria/"
@@ -57,7 +57,7 @@ export const Footer = () => {
               </p>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />
-                info@example.com
+                ryodan@comiqueria.cl
               </p>
               <p>
                 <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
