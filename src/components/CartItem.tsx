@@ -36,18 +36,14 @@ export function CartItem({ id, quantity }: CartItemProps) {
         <div>
           {item.data.name}{" "}
           {quantity > 1 && (
-            <span  style={{ fontSize: ".65rem" }}>
-              x{quantity}
-            </span>
+            <span style={{ fontSize: ".65rem" }}>x{quantity}</span>
           )}
         </div>
-        <div  style={{ fontSize: ".75rem" }}>
-          {item.data.precio}
-        </div>
+        <div style={{ fontSize: ".75rem" }}>${item.data.precio}</div>
       </div>
-      <div> {item.data.precio * quantity}</div>
+      <div> ${item.data.precio * quantity}</div>
       <Button
-        variant="outline-danger"
+        variant="danger"
         size="sm"
         onClick={() => removeFromCart(item.data.id)}
       >
