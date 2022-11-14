@@ -4,25 +4,25 @@ import Carousel from "react-bootstrap/Carousel";
 export const Carousel_first = () => {
   return (
     <div>
-      <Carousel>
+      <Carousel fade>
         <Carousel.Item interval={1000}>
           <img
             className="d-block w-100"
-            src="/images/products-01.jpg"
+            src="/images/berserk.png"
             alt="First slide"
           />
         </Carousel.Item>
-        <Carousel.Item interval={500}>
+        <Carousel.Item interval={1000}>
           <img
             className="d-block w-100"
-            src="/images/products-02.jpg"
+            src="/images/bnh.png"
             alt="Second slide"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/images/products-03.jpg"
+            src="/images/hxh.png"
             alt="Third slide"
           />
         </Carousel.Item>
