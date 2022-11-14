@@ -8,15 +8,15 @@ export const OffCanvas_4 = () => {
     const handleShow = () => setShow(true);
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button onClick={handleShow} variant="outline-light" >
         Ver más
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
+      <Offcanvas.Header closeButton closeVariant='white' style={{color:'white', background:"#7F0102", textAlign:"justify"}}>
           <Offcanvas.Title>Trama</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body style={{color:'white', background:"#7F0102", textAlign:"justify"}}>
         Japón es constantemente invadido por criaturas llamadas “kaiju”, Monstruos de diferentes formas y
            tamaños que causan catástrofes y destrucción donde quiera que van. Debido a ello, existe el "Cuerpo de Defensa",
             un servicio que se encargan de aniquilar y asesinar a los kaijuu cuando llegan a las ciudades, y el "Monster Sweeper",

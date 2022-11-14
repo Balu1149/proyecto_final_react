@@ -14,6 +14,15 @@ export const NavigationBar = () => {
   return (
     <Navbar className="color-nav" expand="lg" variant="dark" sticky="top">
       <Container>
+          <Navbar.Brand href="https://www.instagram.com/ryodan.comiqueria/">
+            <img
+              src="/images/Logo.png"
+              width="30"
+              height="30"
+              className="me-auto"
+              alt="React Bootstrap logo"
+            />
+          </Navbar.Brand>
         <Navbar.Brand to="/" as={NavLink}>
           Ryodan-Comiquería
         </Navbar.Brand>
