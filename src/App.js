@@ -4,7 +4,6 @@ import React from "react";
 import { NavigationBar } from "./components/NavigationBar";
 import { Carousel_first } from "./components/Carousel_first";
 import { PlaceHolder_1 } from "./components/PlaceHolder_1";
-import { PlaceHolder_2 } from "./components/PlaceHolder_2";
 import { Footer } from "./components/Footer";
 import { Store } from "./components/Store";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext.tsx";
