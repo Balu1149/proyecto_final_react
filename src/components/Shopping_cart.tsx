@@ -24,16 +24,22 @@ export function Shopping_cart({ isOpen }: Shopping_cartProps) {
 
   const { closeCart, cartItems } = useShoppingCart();
   return (
-    <Offcanvas show={isOpen} placement="end" onHide={closeCart} >
-      <Offcanvas.Header closeButton closeVariant='white' style={{color:'white', background:"#7F0102", textAlign:"justify"}}>
+    <Offcanvas show={isOpen} placement="end" onHide={closeCart}>
+      <Offcanvas.Header
+        closeButton
+        closeVariant="white"
+        style={{ color: "white", background: "#7F0102", textAlign: "justify" }}
+      >
         <Offcanvas.Title>Carrito</Offcanvas.Title>
       </Offcanvas.Header>
-      <Offcanvas.Body style={{color:'white', background:"#7F0102", textAlign:"justify"}}>
+      <Offcanvas.Body
+        style={{ color: "white", background: "#7F0102", textAlign: "justify" }}
+      >
         <Stack gap={3}>
           {cartItems.map((item) => (
             <CartItem key={item.id} {...item} />
           ))}
-          <div className="ms-auto fw-bold fs-5" >
+          <div className="ms-auto fw-bold fs-5">
             Total $
             {cartItems.reduce((total, cartItem) => {
               const item = Articulos.find((i) => i.data.id === cartItem.id);

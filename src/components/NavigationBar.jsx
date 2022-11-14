@@ -19,7 +19,7 @@ export const NavigationBar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto" style={{ alignItems: "center" }} >
+          <Nav className="me-auto" style={{ alignItems: "center" }}>
             <Nav.Link to="/" as={NavLink}>
               Inicio
             </Nav.Link>
@@ -40,7 +40,7 @@ export const NavigationBar = () => {
             <Nav.Link href="#link">Otro link</Nav.Link> */}
           </Nav>
           <Nav style={{ alignItems: "center" }}>
-            <Nav.Link href="https://www.instagram.com/ryodan.comiqueria/" >
+            <Nav.Link href="https://www.instagram.com/ryodan.comiqueria/">
               <span>
                 <FontAwesomeIcon icon={faInstagram} />
               </span>
@@ -48,9 +48,8 @@ export const NavigationBar = () => {
             {cartQuantity > 0 && (
               <Button
                 onClick={openCart}
-                style={{ width: "6rem", height: "6rem", position: "relative" }}
-                variant="outline-white"
-                className="rounded-circle"
+                variant="link"
+                style={{ color: "white" }}
               >
                 <span class="material-symbols-outlined">shopping_cart</span>
                 <div

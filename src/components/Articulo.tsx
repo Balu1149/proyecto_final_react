@@ -30,13 +30,15 @@ export function Articulo({ id, name, precio, imgUrl }: ArticuloProps) {
       <Card.Body className="d-flex flex-column">
         <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
           <span className="fs-2">{name}</span>
-          <span className="ms-2 text-muted">${precio}</span>
+          <span className="ms-2" style={{ color: "#D4D4D4" }}>
+            ${precio}
+          </span>
         </Card.Title>
         <div className="mt-auto">
           {quantity === 0 ? (
             <Button
               className="w-100"
-              variant="light"
+              variant="outline-light"
               onClick={() => increaseCartQuantity(id)}
             >
               Agregar al carrito
@@ -52,7 +54,7 @@ export function Articulo({ id, name, precio, imgUrl }: ArticuloProps) {
               >
                 <Button
                   className="w-100"
-                  variant="light"
+                  variant="outline-light"
                   onClick={() => decreaseCartQuantity(id)}
                 >
                   -
@@ -60,7 +62,7 @@ export function Articulo({ id, name, precio, imgUrl }: ArticuloProps) {
                 <span className="fs-3">{quantity}</span>
                 <Button
                   className="w-100"
-                  variant="light"
+                  variant="outline-light"
                   onClick={() => increaseCartQuantity(id)}
                 >
                   +
